@@ -3,3 +3,10 @@
 
 <h2><%= @user.email %></h2>
 <small>Last Sign in: <%= @user.last_sign_in_at %></small>
+
+<h2>Things to do</h2>
+<%= render "items/item" %>
+
+<%= render "items/form", item: Item.new, user: @user %>
+
+
