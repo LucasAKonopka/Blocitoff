@@ -2,7 +2,7 @@
 	<%= @user.items.each do |i| %>
 		<li> 
 			<%= i.name %> |  <%= link_to "", [@user, i], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+			| <small>Days Since Creation:  <%= distance_of_time_in_words(i.created_at, Time.now) %></small>
 		</li>
-
 	<% end %>
 </ul>
