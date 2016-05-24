@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
 			flash[:error] = "There was an error deleting the Item"
 		end
 
-	    respond_to do |format|
+	   respond_to do |format|
        		format.html
        		format.js
         end

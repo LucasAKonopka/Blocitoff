@@ -7,6 +7,8 @@
 <h2>Things to do</h2>
 <%= render "items/item" %>
 
-<%= render "items/form", item: Item.new, user: @user %>
+<% if current_user %>
+	<%= render "items/form", item: Item.new, user: @user %>
+<% end %>
 
 

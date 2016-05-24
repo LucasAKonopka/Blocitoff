@@ -1,7 +1,5 @@
 <% if @item.destroyed? %>
-  $('#item-' +<%= @item.id %>).remove();
-   alert('BOOM');
-  $('.js-item-count').html("<%= @user.items.count%>")
-  <% else %>
+  $('#item-' +<%= @item.id %>).remove();   
+ <% else %>
   $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash.now[:alert] %></div>");
 <% end %>
